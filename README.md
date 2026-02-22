@@ -265,6 +265,62 @@ The program:
 
 ---
 
+🔍 Commands I Used for Log Separation:
+
+To analyze and separate specific log types, I used various Linux commands:
+
+1. Authentication / Security Logs (Failed password attempts, brute force detection)
+grep "authentication failure" logs/auth.log
+grep "Failed password" logs/auth.log
+grep "Accepted password" logs/auth.log
+
+2. System Logs (Kernel and system errors)
+grep "kernel" logs/auth.log
+grep "systemd" logs/auth.log
+
+3. Application Logs (Application-level events, e.g., database failures, web server errors)
+grep "ERROR" logs/auth.log
+grep "application error" logs/auth.log
+
+4. Web Server Logs (HTTP access, response status)
+grep "GET" logs/auth.log
+grep "POST" logs/auth.log
+
+5. Firewall / Network Logs (Firewall events, network connection issues)
+grep "firewalld" logs/auth.log
+grep "network" logs/auth.log
+
+6. IDS / IPS Logs (Intrusion attempts and alerts)
+grep "IDS" logs/auth.log
+grep "intrusion" logs/auth.log
+
+7. Proxy Logs (Web proxy requests)
+grep "proxy" logs/auth.log
+grep "Web Proxy" logs/auth.log
+
+8. DNS Logs (DNS queries, unusual traffic)
+grep "DNS" logs/auth.log
+grep "query" logs/auth.log
+
+9. Email Logs (Email delivery, spam detection)
+grep "email" logs/auth.log
+grep "mail gateway" logs/auth.log
+
+10. AV / EDR Logs (Malware detection and security events)
+grep "AV" logs/auth.log
+grep "EDR" logs/auth.log
+
+11. Cloud / IAM / Audit Logs (User activity, cloud service logs)
+grep "cloud" logs/auth.log
+grep "audit" logs/auth.log
+
+💡 Key Takeaways from the Project:
+Simulating SOC Activities: The project allowed me to simulate a Security Operations Center (SOC) environment, where I monitored and analyzed various types of logs to detect suspicious activities.
+
+Real-Time Log Monitoring: Used Linux commands like tail, grep, and awk to filter and separate specific log types for real-time analysis.
+
+Log Filtering Skills: By using simple but effective Linux commands, I was able to focus on critical alerts, such as brute force attacks, failed login attempts, and privilege escalation.
+
 ## License
 
 This project is for learning and SOC training purposes. Use and modify it freely for educational or lab environments.
